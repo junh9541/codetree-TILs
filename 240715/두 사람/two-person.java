@@ -11,8 +11,6 @@ public class Main {
         int age2 = sc.nextInt();
         char gen2 = sc.next().charAt(0);
 
-        System.out.print(gen1=='M');
-
 
         if((age1>19 && gen1=='M') ||(age2>19 && gen2=='M')){
             System.out.print(1);     
