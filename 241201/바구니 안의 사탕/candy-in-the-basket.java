@@ -33,16 +33,17 @@ public class Main {
         
         for(int i = 0; i<N; i++) {
         	if(baskets[i][0]>selected.getFirst()[0]+K*2) {
+				if(maxCandy<candySum) {
+        			maxCandy=candySum;
+        		}
         		while(!selected.isEmpty()) {
         			if((baskets[i][0]<=selected.getFirst()[0]+K*2)) {
         				break;
         			}
-        			selected.pollFirst();
+        			int[] removed = selected.pollFirst();
+					candySum-=removed[1];
         		}
-        		if(maxCandy<candySum) {
-        			maxCandy=candySum;
-        		}
-        		candySum = 0;
+        		
         	}
         	selected.add(baskets[i]);
     		candySum+=baskets[i][1];
