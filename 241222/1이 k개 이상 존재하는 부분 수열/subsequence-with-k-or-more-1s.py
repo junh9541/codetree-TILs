@@ -4,7 +4,7 @@ arr = list(map(int, input().split()))
 
 #없으면 -1 출력
 
-count = 1 # count : 포함된 1의 개수
+count = 0 # count : 포함된 1의 개수
 j = 0
 ans = n + 1
 
@@ -15,7 +15,7 @@ for i in range(n):
 
     while j <= n - 1 and count < k:
 
-        if j != 0 and arr[j] == 1:
+        if arr[j] == 1:
             count += 1
 
         j += 1
